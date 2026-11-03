@@ -1,0 +1,51 @@
+* { box-sizing: border-box; }
+:root { color: #292d32; background: #fff; font: 14px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+body { margin: 0; }
+a { color: #4e6381; text-underline-offset: 3px; }
+button, input { font: inherit; }
+button, a, input, summary { outline-offset: 4px; }
+.hub { max-width: 960px; padding: 30px; margin: 0 auto; }
+.hub > header { display: flex; align-items: baseline; gap: 15px; border-bottom: 1px solid #e8eaed; padding-bottom: 20px; }
+.wordmark { font-size: 16px; font-weight: 650; letter-spacing: -.3px; }
+.breadcrumb { font-size: 12px; color: #717984; }
+.hub-intro { padding: 30px 0 23px; }
+h1 { margin: 0 0 8px; font-size: 25px; letter-spacing: -.6px; font-weight: 600; line-height: 1.35; }
+.hub-intro p { color: #717984; margin: 0; font-size: 13px; }
+.scenario-table { width: 100%; border-collapse: collapse; text-align: left; }
+.scenario-table th { border-bottom: 1px solid #dfe3e8; padding: 10px 12px; color: #717984; font-size: 11px; font-weight: 500; }
+.scenario-table th:first-child, .scenario-table td:first-child { padding-left: 0; }
+.scenario-table th:last-child, .scenario-table td:last-child { padding-right: 0; }
+.scenario-table td { border-bottom: 1px solid #eceef1; padding: 17px 12px; vertical-align: top; }
+.scenario-table .number { font: 11px ui-monospace, SFMono-Regular, Consolas, monospace; color: #7b828c; padding-top: 20px; width: 35px; }
+.scenario-name { color: #383f49; font-size: 13px; font-weight: 550; display: block; text-decoration: none; width: fit-content; }
+.scenario-name:hover { text-decoration: underline; }
+.scenario-detail { color: #717984; margin-top: 4px; font-size: 11px; max-width: 340px; line-height: 1.6; }
+.scenario-host { color: #717984; font: 10px/1.7 ui-monospace, SFMono-Regular, Consolas, monospace; overflow-wrap: anywhere; }
+.result { color: #717b88; font-size: 11px; white-space: nowrap; }
+.result.green { color: #64846e; }
+.result.red { color: #ad655d; }
+.result.amber { color: #aa8b50; }
+.open-link { font-size: 11px; text-decoration: none; }
+.open-link:hover { text-decoration: underline; }
+.how { margin-top: 27px; color: #717984; font-size: 12px; max-width: 700px; }
+.how summary { cursor: pointer; color: #737d8a; width: fit-content; }
+.how p { line-height: 1.8; margin: 12px 0; }
+.demo-banner { padding: 13px 24px; border-bottom: 1px solid #e8eaed; display: flex; gap: 14px; align-items: baseline; color: #717984; font-size: 11px; }
+.demo-banner > span { color: #6c7683; font-size: 11px; }
+.demo-banner a { margin-left: auto; color: #7b8797; text-decoration: none; }
+.demo-banner a:hover { text-decoration: underline; }
+.login-layout { max-width: 360px; margin: 66px auto; padding: 0 20px; }
+.northstar-logo { color: #303d53; font-size: 20px; font-weight: 600; letter-spacing: -.5px; padding-bottom: 22px; border-bottom: 1px solid #e8ebef; margin-bottom: 25px; }
+.login-box h1 { font-size: 23px; margin: 0 0 7px; }
+.login-intro { font-size: 12px; line-height: 1.7; color: #717984; margin: 0 0 23px; }
+.login-box label { display: block; margin-bottom: 6px; font-size: 12px; color: #737e8e; }
+.login-box input { display: block; width: 100%; border: 1px solid #dce1e8; background: #fff; border-radius: 4px; padding: 9px 11px; margin-bottom: 17px; font-size: 12px; color: #3b495e; }
+.login-box input::placeholder { color: #7b828c; }
+.login-box button { width: 100%; background: #35445d; border: 1px solid #35445d; border-radius: 4px; padding: 9px 12px; color: #fff; font-size: 12px; font-weight: 500; cursor: pointer; margin-top: 5px; }
+.login-box button:hover { background: #455771; }
+.support { font-size: 11px; line-height: 1.7; margin-top: 18px; color: #717984; }
+.login-note { margin-top: 22px; color: #717984; font-size: 10px; }
+#demo-message { color: #627e65; font-size: 11px; }
+.ordinary { max-width: 660px; padding: 30px; margin: 65px auto; }
+.ordinary p { color: #858f9e; font-size: 13px; }
+@media (max-width: 720px) { .hub { padding: 20px; } .scenario-table .host-column { display: none; } .scenario-detail { max-width: 260px; } .scenario-table td { padding: 15px 7px; } .result { font-size: 10px; } .demo-banner { padding: 12px; font-size: 10px; gap: 8px; } }

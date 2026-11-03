@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SiteLens settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <header><span class="wordmark">SiteLens</span><span>Settings</span></header>
+    <h1>Settings</h1>
+    <p class="lead">Changes apply to your next scan.</p>
+    <section aria-labelledby="model-heading">
+      <h2 id="model-heading">Hostname model</h2>
+      <label class="toggle"><input id="model" type="checkbox"><span>Use the experimental model</span></label>
+      <p>Adds a warning when a hostname matches patterns in the training data. Rules always run. The model is skipped on local addresses and configured brand domains.</p>
+      <details><summary>Model details</summary><p id="model-version" class="muted"></p><p>Trained on a historical URL dataset. It can miss phishing sites and flag legitimate ones. Results are not a probability that a site is unsafe.</p></details>
+    </section>
+    <section aria-labelledby="brands-heading">
+      <h2 id="brands-heading">Custom brands</h2>
+      <p>Add brands you want to check. Enter only domains you have verified.</p>
+      <div id="brands" class="brand-list"></div>
+      <p id="brands-empty" class="empty-note">No custom brands added.</p>
+      <button id="add-brand" class="secondary">Add brand</button>
+      <p class="hint">Separate multiple names or domains with commas. Subdomains are included.</p>
+    </section>
+    <div class="save-row"><button id="save" class="primary">Save changes</button><p id="status" class="status" role="status"></p></div>
+    <section>
+      <details><summary>Built-in brand domains</summary><p>The reference list may be incomplete. Recognizing a domain does not confirm that a page is safe.</p><ul id="registry" class="registry"></ul></details>
+    </section>
+    <section>
+      <h2>Privacy</h2>
+      <p>Scans run on this device. Password values, cookies, and screenshots are not collected. No network requests are made. Reports are kept only while the popup is open, unless you export one.</p>
+      <p>Your settings and custom brand list are saved in this browser.</p>
+    </section>
+  </main>
+  <script type="module" src="options.js"></script>
+</body>
+</html>

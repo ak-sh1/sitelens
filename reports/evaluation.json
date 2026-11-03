@@ -1,0 +1,220 @@
+{
+  "notice": "Curated regression cases are not a phishing benchmark or an estimate of real browsing protection. URL classifier holdout metrics are a separate historical experiment. Full rule/hybrid precision and recall on contemporary websites have not been established.",
+  "curatedCases": {
+    "passed": 20,
+    "total": 20,
+    "modelChangedVerdicts": 1,
+    "cases": [
+      {
+        "name": "Recognized Google login",
+        "expectedRuleVerdict": "clear",
+        "ruleVerdict": "clear",
+        "hybridVerdict": "clear",
+        "rulePass": true
+      },
+      {
+        "name": "Microsoft legitimate authentication domain",
+        "expectedRuleVerdict": "clear",
+        "ruleVerdict": "clear",
+        "hybridVerdict": "clear",
+        "rulePass": true
+      },
+      {
+        "name": "Google lookalike",
+        "expectedRuleVerdict": "high",
+        "ruleVerdict": "high",
+        "hybridVerdict": "high",
+        "modelSignal": "low",
+        "rulePass": true
+      },
+      {
+        "name": "Recognized text nested under unrelated root",
+        "expectedRuleVerdict": "high",
+        "ruleVerdict": "high",
+        "hybridVerdict": "high",
+        "modelSignal": "elevated",
+        "rulePass": true
+      },
+      {
+        "name": "Unrecognized password form destination",
+        "expectedRuleVerdict": "review",
+        "ruleVerdict": "review",
+        "hybridVerdict": "review",
+        "modelSignal": "low",
+        "rulePass": true
+      },
+      {
+        "name": "Known SSO is informational",
+        "expectedRuleVerdict": "clear",
+        "ruleVerdict": "clear",
+        "hybridVerdict": "clear",
+        "modelSignal": "low",
+        "rulePass": true
+      },
+      {
+        "name": "Known SSO never excuses a lookalike",
+        "expectedRuleVerdict": "high",
+        "ruleVerdict": "high",
+        "hybridVerdict": "high",
+        "modelSignal": "low",
+        "rulePass": true
+      },
+      {
+        "name": "HTTP declared submission",
+        "expectedRuleVerdict": "high",
+        "ruleVerdict": "high",
+        "hybridVerdict": "high",
+        "modelSignal": "low",
+        "rulePass": true
+      },
+      {
+        "name": "HTTP page with password",
+        "expectedRuleVerdict": "high",
+        "ruleVerdict": "high",
+        "hybridVerdict": "high",
+        "modelSignal": "low",
+        "rulePass": true
+      },
+      {
+        "name": "No-password brand mention does not imply impersonation",
+        "expectedRuleVerdict": "clear",
+        "ruleVerdict": "clear",
+        "hybridVerdict": "clear",
+        "modelSignal": "low",
+        "rulePass": true
+      },
+      {
+        "name": "Mismatched displayed URL",
+        "expectedRuleVerdict": "review",
+        "ruleVerdict": "review",
+        "hybridVerdict": "review",
+        "modelSignal": "low",
+        "rulePass": true
+      },
+      {
+        "name": "Same registered site link variation",
+        "expectedRuleVerdict": "clear",
+        "ruleVerdict": "clear",
+        "hybridVerdict": "clear",
+        "modelSignal": "low",
+        "rulePass": true
+      },
+      {
+        "name": "Punycode alone is informational",
+        "expectedRuleVerdict": "clear",
+        "ruleVerdict": "clear",
+        "hybridVerdict": "review",
+        "modelSignal": "elevated",
+        "rulePass": true
+      },
+      {
+        "name": "A model-free ordinary HTTPS page",
+        "expectedRuleVerdict": "clear",
+        "ruleVerdict": "clear",
+        "hybridVerdict": "clear",
+        "modelSignal": "low",
+        "rulePass": true
+      },
+      {
+        "name": "Northstar local legitimate login",
+        "expectedRuleVerdict": "clear",
+        "ruleVerdict": "clear",
+        "hybridVerdict": "clear",
+        "rulePass": true
+      },
+      {
+        "name": "Northstar local lookalike",
+        "expectedRuleVerdict": "high",
+        "ruleVerdict": "high",
+        "hybridVerdict": "high",
+        "rulePass": true
+      },
+      {
+        "name": "Northstar demo SSO",
+        "expectedRuleVerdict": "clear",
+        "ruleVerdict": "clear",
+        "hybridVerdict": "clear",
+        "rulePass": true
+      },
+      {
+        "name": "Userinfo is not the hostname",
+        "expectedRuleVerdict": "review",
+        "ruleVerdict": "review",
+        "hybridVerdict": "review",
+        "modelSignal": "low",
+        "rulePass": true
+      },
+      {
+        "name": "Unowned password field surfaces uncertainty",
+        "expectedRuleVerdict": "clear",
+        "ruleVerdict": "clear",
+        "hybridVerdict": "clear",
+        "modelSignal": "low",
+        "rulePass": true
+      },
+      {
+        "name": "Embedded frame is explicitly uninspected",
+        "expectedRuleVerdict": "clear",
+        "ruleVerdict": "clear",
+        "hybridVerdict": "clear",
+        "modelSignal": "low",
+        "rulePass": true
+      }
+    ]
+  },
+  "historicalUrlModel": {
+    "version": "phiusiil-hostname-logistic-v1",
+    "datasetYear": 2024,
+    "threshold": 0.8921214340776278,
+    "metrics": {
+      "train": {
+        "rows": 152860,
+        "domains": 126272,
+        "phishing_rows": 66559,
+        "roc_auc": 0.8033342463157778,
+        "average_precision": 0.8317018598873314,
+        "precision": 0.9768562153105037,
+        "recall": 0.42043900899953424,
+        "false_positive_rate": 0.007682413877011854,
+        "confusion": {
+          "true_negative": 85638,
+          "false_positive": 663,
+          "false_negative": 38575,
+          "true_positive": 27984
+        }
+      },
+      "validation": {
+        "rows": 36406,
+        "domains": 31568,
+        "phishing_rows": 14674,
+        "roc_auc": 0.7810986988058103,
+        "average_precision": 0.7931856979914835,
+        "precision": 0.9620960698689957,
+        "recall": 0.37535777565762574,
+        "false_positive_rate": 0.009985275170255844,
+        "confusion": {
+          "true_negative": 21515,
+          "false_positive": 217,
+          "false_negative": 9166,
+          "true_positive": 5508
+        }
+      },
+      "test": {
+        "rows": 46104,
+        "domains": 39461,
+        "phishing_rows": 19287,
+        "roc_auc": 0.79358808912918,
+        "average_precision": 0.8152732976975364,
+        "precision": 0.9769907240091555,
+        "recall": 0.4204904858194639,
+        "false_positive_rate": 0.0071223477644777565,
+        "confusion": {
+          "true_negative": 26626,
+          "false_positive": 191,
+          "false_negative": 11177,
+          "true_positive": 8110
+        }
+      }
+    }
+  }
+}

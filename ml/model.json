@@ -1,0 +1,128 @@
+{
+  "available": true,
+  "version": "phiusiil-hostname-logistic-v1",
+  "experimental": true,
+  "threshold": 0.8921214340776278,
+  "featureNames": [
+    "hostname_length",
+    "domain_length",
+    "hostname_digit_ratio",
+    "hostname_hyphens",
+    "subdomain_count",
+    "ip_hostname",
+    "punycode",
+    "sensitive_hostname_words",
+    "hostname_entropy",
+    "domain_digit_ratio",
+    "longest_label",
+    "longest_digit_run"
+  ],
+  "mean": [
+    18.43525448122465,
+    16.19810938113306,
+    0.03471430483749007,
+    0.28216668847311266,
+    0.20368310872693968,
+    0.002708360591390815,
+    0.0005953159754023289,
+    0.012920319246369227,
+    3.41939632918462,
+    0.025493938203856866,
+    11.984790003925161,
+    0.6354899908412927
+  ],
+  "scale": [
+    9.741524835497815,
+    8.148527853115397,
+    0.0994648831636633,
+    0.7546774479580088,
+    0.5093353708675603,
+    0.051971389959340475,
+    0.02439183417233671,
+    0.12125543644710841,
+    0.42747233627185854,
+    0.09171901209643595,
+    7.10070531293365,
+    1.8151723407731
+  ],
+  "coefficients": [
+    2.7189577432034153,
+    -0.34795456536165004,
+    0.33433950968093384,
+    0.7114303628035075,
+    0.46283338532615864,
+    0.2751559570489869,
+    0.12954241209466263,
+    0.3036821653052773,
+    -0.2507981463750748,
+    -0.2791380227195456,
+    -1.5876931495172157,
+    1.5054743809487177
+  ],
+  "intercept": 0.6908344143700051,
+  "source": {
+    "source": "https://archive.ics.uci.edu/static/public/967/phiusiil+phishing+url+dataset.zip",
+    "doi": "10.1016/j.cose.2023.103545",
+    "license": "CC BY 4.0",
+    "creators": [
+      "Arvind Prasad",
+      "Shalini Chandra"
+    ],
+    "dataset_year": 2024,
+    "archive_sha256": "0a639fd03aea6308c5b1c10c92aa23c2ce1505447a9137271865cd0badc9a59a",
+    "unique_urls": 235370
+  },
+  "sklearn_version": "1.8.0",
+  "split": "registrable-domain-disjoint; seeds 42/43; train 64%, validation 16%, test 20% of groups",
+  "threshold_selection": "maximize validation recall subject to validation false-positive rate <= 1%; test labels never used for selection",
+  "metrics": {
+    "train": {
+      "rows": 152860,
+      "domains": 126272,
+      "phishing_rows": 66559,
+      "roc_auc": 0.8033342463157778,
+      "average_precision": 0.8317018598873314,
+      "precision": 0.9768562153105037,
+      "recall": 0.42043900899953424,
+      "false_positive_rate": 0.007682413877011854,
+      "confusion": {
+        "true_negative": 85638,
+        "false_positive": 663,
+        "false_negative": 38575,
+        "true_positive": 27984
+      }
+    },
+    "validation": {
+      "rows": 36406,
+      "domains": 31568,
+      "phishing_rows": 14674,
+      "roc_auc": 0.7810986988058103,
+      "average_precision": 0.7931856979914835,
+      "precision": 0.9620960698689957,
+      "recall": 0.37535777565762574,
+      "false_positive_rate": 0.009985275170255844,
+      "confusion": {
+        "true_negative": 21515,
+        "false_positive": 217,
+        "false_negative": 9166,
+        "true_positive": 5508
+      }
+    },
+    "test": {
+      "rows": 46104,
+      "domains": 39461,
+      "phishing_rows": 19287,
+      "roc_auc": 0.79358808912918,
+      "average_precision": 0.8152732976975364,
+      "precision": 0.9769907240091555,
+      "recall": 0.4204904858194639,
+      "false_positive_rate": 0.0071223477644777565,
+      "confusion": {
+        "true_negative": 26626,
+        "false_positive": 191,
+        "false_negative": 11177,
+        "true_positive": 8110
+      }
+    }
+  }
+}

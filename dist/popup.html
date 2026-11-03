@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SiteLens</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wordmark"><svg aria-hidden="true" width="19" height="19" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>SiteLens</span></div>
+    <button id="settings" class="text-button">Settings</button>
+  </header>
+  <main>
+    <section class="page-heading" aria-label="Current page">
+      <div class="page-label">Current page <span id="demo-label" hidden>· Local demo</span></div>
+      <h1 id="hostname">No page selected</h1>
+      <button id="scan" class="primary">Scan this page</button>
+    </section>
+    <p id="error" class="error-box" role="alert" hidden></p>
+    <section id="empty" class="empty">
+      <p>Checks the domain, password forms, and links.</p>
+      <dl class="check-list"><div><dt>Domain</dt><dd>Brand names and similar addresses</dd></div><div><dt>Login forms</dt><dd>Where the page says it sends data</dd></div><div><dt>Links</dt><dd>Displayed URLs and their destinations</dd></div></dl>
+    </section>
+    <div id="results" hidden>
+      <section id="verdict-card" class="verdict-card" aria-live="polite">
+        <h2 id="verdict-title"></h2>
+        <p id="verdict-subtitle"></p>
+      </section>
+      <dl class="facts" aria-label="Page details">
+        <div><dt>Main domain</dt><dd id="domain-value"></dd></div>
+        <div><dt>Password fields</dt><dd id="fields-value"></dd></div>
+        <div><dt>Brand mentioned</dt><dd id="brand-value"></dd></div>
+      </dl>
+      <section aria-labelledby="findings-heading">
+        <div class="section-heading"><h2 id="findings-heading">Findings</h2><span id="finding-count"></span></div>
+        <div id="findings"></div>
+      </section>
+      <details class="coverage"><summary>Scan limitations</summary><ul id="coverage"></ul></details>
+      <details class="engine"><summary id="engine-label">Analysis</summary><p id="model-state"></p></details>
+      <div class="report-actions"><span id="timing"></span><button id="export" class="text-button" disabled>Export report</button></div>
+    </div>
+  </main>
+  <footer>Processed on this device. No data sent.</footer>
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

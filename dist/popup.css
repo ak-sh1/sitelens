@@ -1,0 +1,59 @@
+* { box-sizing: border-box; }
+:root { color: #202124; background: #fff; font: 13px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-synthesis: none; }
+body { width: 400px; margin: 0; }
+[hidden] { display: none !important; }
+button { font: inherit; cursor: pointer; }
+button:disabled { opacity: .5; cursor: default; }
+button:focus-visible, summary:focus-visible { outline: 2px solid #4679c7; outline-offset: 3px; }
+.topbar { position: sticky; top: 0; z-index: 1; background: #fff; display: flex; align-items: center; justify-content: space-between; height: 56px; padding: 0 20px; border-bottom: 1px solid #e8e8e8; }
+.wordmark { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 650; letter-spacing: -.25px; }
+.text-button { padding: 3px 0; border: 0; background: none; color: #50555b; font-size: 12px; text-decoration: none; }
+.text-button:hover { color: #17191c; text-decoration: underline; text-underline-offset: 3px; }
+main { padding: 20px; }
+.page-label { margin-bottom: 5px; color: #6d7279; font-size: 11px; }
+#demo-label { color: #6d7279; }
+h1 { margin: 0 0 17px; font-size: 17px; font-weight: 600; letter-spacing: -.3px; line-height: 1.4; overflow-wrap: anywhere; }
+.primary { width: 100%; min-height: 37px; padding: 8px 12px; background: #292c30; border: 1px solid #292c30; border-radius: 5px; color: #fff; font-size: 12px; font-weight: 550; }
+.primary:hover:not(:disabled) { background: #41454b; border-color: #41454b; }
+.empty { padding-top: 16px; }
+.empty > p { margin: 0 0 17px; color: #656970; font-size: 12px; }
+.check-list { margin: 0; border-top: 1px solid #ededee; }
+.check-list > div { display: grid; grid-template-columns: 78px 1fr; gap: 9px; padding: 11px 0; border-bottom: 1px solid #ededee; font-size: 11px; }
+.check-list dt { color: #33373c; }
+.check-list dd { color: #737880; margin: 0; }
+.verdict-card { padding: 12px 14px; margin: 18px 0; border-left: 3px solid; background: #f7f8f8; }
+.verdict-card.clear { border-color: #5c806c; }
+.verdict-card.review { border-color: #b68a35; background: #fcfaf5; }
+.verdict-card.high { border-color: #bc5147; background: #fcf7f6; }
+.verdict-card h2 { margin: 0 0 5px; font-size: 14px; font-weight: 600; line-height: 1.4; }
+.verdict-card p { margin: 0; color: #666970; font-size: 11px; line-height: 1.6; }
+.facts { margin: 0 0 21px; }
+.facts > div { display: grid; grid-template-columns: 110px 1fr; gap: 12px; margin-top: 8px; font-size: 11px; }
+.facts dt { color: #737880; }
+.facts dd { margin: 0; color: #41464c; overflow-wrap: anywhere; }
+.facts > div:first-child dd { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 10px; border-bottom: 1px solid #e9eaec; }
+.section-heading h2 { margin: 0; font-size: 12px; font-weight: 600; }
+.section-heading > span { color: #737880; font-size: 10px; }
+.finding { padding: 14px 0 15px; border-bottom: 1px solid #e9eaec; }
+.finding-heading { display: flex; align-items: baseline; gap: 8px; }
+.finding h3 { font-size: 12px; line-height: 1.5; font-weight: 600; margin: 0; }
+.finding-level { color: #8d713a; font-size: 10px; flex-shrink: 0; }
+.finding.high .finding-level { color: #a64940; }
+.finding.info .finding-level { color: #737880; }
+.finding p { margin: 6px 0 9px; font-size: 11px; line-height: 1.65; color: #72767c; }
+.evidence { display: grid; grid-template-columns: 96px 1fr; margin: 0; gap: 4px 8px; font-size: 10px; }
+.evidence dt { color: #737880; }
+.evidence dd { margin: 0; color: #545b63; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; overflow-wrap: anywhere; line-height: 1.6; }
+.quiet-note { padding: 4px 0; margin: 10px 0 19px; color: #737880; font-size: 11px; }
+.coverage, .engine { padding-top: 13px; font-size: 11px; color: #797d84; }
+summary { cursor: pointer; width: fit-content; }
+summary:hover { color: #30343a; }
+.coverage ul { padding-left: 16px; margin: 9px 0 0; font-size: 10px; line-height: 1.7; }
+.coverage li + li { margin-top: 5px; }
+.engine p { margin: 8px 0 0; font-size: 10px; line-height: 1.7; }
+.report-actions { margin-top: 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.report-actions > span { font-size: 10px; color: #777d85; }
+.report-actions .text-button { font-size: 11px; }
+.error-box { margin: 16px 0 0; padding: 11px 12px; background: #fcf6f5; border-left: 2px solid #bd645b; color: #925248; font-size: 12px; line-height: 1.65; }
+footer { padding: 12px 20px; border-top: 1px solid #e8e8e8; font-size: 10px; color: #737880; }

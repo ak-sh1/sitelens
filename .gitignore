@@ -1,0 +1,7 @@
+node_modules/
+.artifacts/
+__pycache__/
+.venv/
+ml/data/
+*.zip
+*.log
